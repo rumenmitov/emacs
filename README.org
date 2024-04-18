@@ -1,7 +1,7 @@
 #+TITLE: Emacs Configuration
 #+AUTHOR: Rumen Mitov
 #+EMAIL: rumenmitov@protonmail.com
-#+OPTIONS: toc:1
+#+OPTIONS: H:3
 #+PROPERTY: header-args :tangle init.el
 
 
