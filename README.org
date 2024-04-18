@@ -44,6 +44,12 @@
 #+end_src
 
 
+* Misc
+#+begin_src emacs-lisp
+  (setq use-short-answers t)
+#+end_src
+
+
 * Packages
 #+begin_src emacs-lisp
 (require 'package)
