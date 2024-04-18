@@ -52,15 +52,18 @@
 
 * Packages
 #+begin_src emacs-lisp
-(require 'package)
-(add-to-list 'package-archives '("meta" . "https://melpa.org/packages/") t)
-(package-initialize)
+  (require 'package)
+  (add-to-list 'package-archives '("meta" . "https://melpa.org/packages/") t)
+  (package-initialize)
+  
+  (require 'use-package-ensure)
+  (setq use-package-always-ensure t)
 #+end_src
 
 
 ** LSP
 #+begin_src emacs-lisp
-  (package-install 'haskell-mode)
+  (use-package haskell-mode)
 
   (add-hook 'haskell-mode-hook 'eglot-ensure)
   (add-hook 'c-mode-hook 'eglot-ensure)
