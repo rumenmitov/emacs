@@ -2,9 +2,9 @@
 #+AUTHOR: Rumen Mitov
 #+EMAIL: rumenmitov@protonmail.com
 #+OPTIONS: H:3
-#+OPTIONS: toc
 #+PROPERTY: header-args :tangle init.el
 
+#+TOC: headlines 3
 
 * Startup Message
 #+begin_src emacs-lisp
