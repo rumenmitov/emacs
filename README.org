@@ -5,6 +5,9 @@
 #+PROPERTY: header-args :tangle init.el
 
 
+[[./assets/emacs_logo.png]]
+
+
 * Installation
 1. =rm -rf ~/.emacs*=
 2. =mkdir -p ~/.config/emacs=
