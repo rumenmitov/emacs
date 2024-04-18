@@ -5,7 +5,7 @@
 #+PROPERTY: header-args :tangle init.el
 
 
-[[./assets/emacs_logo.png]]
+[[file:./assets/emacs_logo.png]]
 
 
 * Installation
