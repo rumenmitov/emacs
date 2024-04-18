@@ -5,14 +5,26 @@
 #+PROPERTY: header-args :tangle init.el
 
 
-* Startup Message
+* Installation
+1. =rm -rf ~/.emacs/*=
+2. =git clone https://github.com/rumenmitov/emacs.git ~/.config/emacs=
+3. Open Emacs and navigate to *~/.config/emacs/README.org* (using =C-x C-f=)
+4. Reload the configuration: =C-c C-c=
+5. Initialize configuration: =C-c C-v t=
+6. Restart Emacs 🐐
+
+
+* Configuration
+
+
+** Startup Message
 #+begin_src emacs-lisp
 (setq inhibit-startup-message t)
 (setq initial-scratch-message ";; -- Welcome to Emacs --\n\n")
 #+end_src
 
 
-* GUI Options
+** GUI Options
 #+begin_src emacs-lisp
   (menu-bar-mode -1)
   (tool-bar-mode -1)
@@ -26,14 +38,14 @@
 #+end_src
 
 
-* Recent Files
+** Recent Files
 #+begin_src emacs-lisp
   (recentf-mode 1)
   (global-set-key (kbd "C-x C-r") 'recentf-open-files)
 #+end_src
 
 
-* Autocompletion
+** Autocompletion
 #+begin_src emacs-lisp
   (icomplete-vertical-mode)
   (setq icomplete-in-buffer t)
@@ -44,13 +56,13 @@
 #+end_src
 
 
-* Misc
+** Misc
 #+begin_src emacs-lisp
   (setq use-short-answers t)
 #+end_src
 
 
-* Packages
+** Packages
 #+begin_src emacs-lisp
   (require 'package)
   (add-to-list 'package-archives '("meta" . "https://melpa.org/packages/") t)
@@ -61,7 +73,7 @@
 #+end_src
 
 
-** LSP
+*** LSP
 #+begin_src emacs-lisp
   (use-package haskell-mode)
 
