@@ -63,6 +63,8 @@
 ** Misc
 #+begin_src emacs-lisp
   (setq use-short-answers t)
+  
+  (add-hook 'org-mode-hook 'org-indent-mode)
 #+end_src
 
 
