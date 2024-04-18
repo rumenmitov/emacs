@@ -36,8 +36,11 @@
 * Autocompletion
 #+begin_src emacs-lisp
   (icomplete-vertical-mode)
+  (setq icomplete-in-buffer t)
+  (define-key icomplete-vertical-mode-minibuffer-map (kbd "TAB") 'icomplete-force-complete)
+  (define-key icomplete-vertical-mode-minibuffer-map (kbd "RET") 'icomplete-force-complete-and-exit)
   (setq completion-auto-select t)
-  (setq completion-auto-help 'visible)
+  (setq completion-auto-help 'always)
 #+end_src
 
 
