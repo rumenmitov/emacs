@@ -23,8 +23,16 @@
 
 ** Startup Message
 #+begin_src emacs-lisp
-(setq inhibit-startup-message t)
-(setq initial-scratch-message ";; -- Welcome to Emacs --\n\n")
+  (setq inhibit-startup-message t)
+  (setq initial-scratch-message ";; -- Welcome to Emacs --\n\n")
+#+end_src
+
+Setting the variable =inhibit-startup-echo-area-message= did not work for me,
+so I just redefined the function.
+
+#+begin_src emacs-lisp
+  (defun display-startup-echo-area-message ()
+    (message nil))
 #+end_src
 
 
