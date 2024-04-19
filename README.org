@@ -1,8 +1,8 @@
-#+TITLE: Emacs Configuration
-#+AUTHOR: Rumen Mitov
-#+EMAIL: rumenmitov@protonmail.com
-#+OPTIONS: H:3
-#+PROPERTY: header-args :tangle init.el
+#+title: Emacs Configuration
+#+author: Rumen Mitov
+#+email: rumenmitov@protonmail.com
+#+options: H:3
+#+property: header-args :tangle init.el
 
 
 [[file:./assets/emacs_logo.png]]
