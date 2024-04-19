@@ -23,16 +23,11 @@
 
 ** Startup Message
 #+begin_src emacs-lisp
-  (setq inhibit-startup-message t)
-  (setq initial-scratch-message ";; -- Welcome to Emacs --\n\n")
-#+end_src
+   (setq inhibit-startup-message t)
+   (setq initial-scratch-message ";; -- Welcome to Emacs --\n\n")
 
-Setting the variable =inhibit-startup-echo-area-message= did not work for me,
-so I just redefined the function.
-
-#+begin_src emacs-lisp
-  (defun display-startup-echo-area-message ()
-    (message nil))
+   (defun display-startup-echo-area-message ()
+     (message nil))
 #+end_src
 
 
@@ -58,13 +53,28 @@ so I just redefined the function.
 
 
 ** Autocompletion
+The following configuration uses Emacs' native features for 10 autocomplete options
+which can be accessed with the =TAB= key and selected with the =RET= key.
+
 #+begin_src emacs-lisp
   (icomplete-vertical-mode)
-  (setq icomplete-in-buffer t)
-  (define-key icomplete-vertical-mode-minibuffer-map (kbd "TAB") 'icomplete-force-complete)
-  (define-key icomplete-vertical-mode-minibuffer-map (kbd "RET") 'icomplete-force-complete-and-exit)
+
   (setq completion-auto-select t)
   (setq completion-auto-help 'always)
+  (setq completion-show-help nil)
+  (setq completion-ignore-case t)
+  (setq read-buffer-completion-ignore-case t)
+  (setq read-file-name-completion-ignore-case t)
+  (setq icomplete-in-buffer t)
+  (setq completions-max-height 10)
+  (setq completions-format "one-column")
+
+  (setopt completion-fail-discreetly t)
+
+  (define-key icomplete-vertical-mode-minibuffer-map (kbd "TAB") 'icomplete-force-complete)
+  (define-key icomplete-vertical-mode-minibuffer-map (kbd "RET") 'icomplete-force-complete-and-exit)
+
+  (add-hook 'post-self-insert-hook 'completion-help-at-point)
 #+end_src
 
 
