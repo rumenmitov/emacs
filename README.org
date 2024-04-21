@@ -60,6 +60,8 @@ prints a distracting error message.
 
 #+begin_src emacs-lisp
   (icomplete-vertical-mode)
+  (fido-vertical-mode)
+  (electric-pair-mode)
 
   (setq completion-auto-select t)
   (setq completion-auto-help 'always)
@@ -82,10 +84,20 @@ prints a distracting error message.
 #+end_src
 
 
+** Programming Utils
+#+begin_src emacs-lisp
+  (setq compile-command "make ")
+  (setq gdb-show-main t)
+
+  (add-hook 'gdb-breakpoints-mode-hook
+            (lambda () (gdb-load-window-configuration "~/.config/emacs/gdb-window-config")))
+#+end_src
+
+
 ** Misc
 #+begin_src emacs-lisp
   (setq use-short-answers t)
-  
+
   (add-hook 'org-mode-hook 'org-indent-mode)
 #+end_src
 
